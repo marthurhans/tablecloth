@@ -1,3 +1,31 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "tablecloth"
+version = "0.1.0"
+description = "Safely relocate your current working folder to a new destination from the inside out."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name="Mike Hans", email="marthurhans@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+tablecloth = "tablecloth.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["tablecloth"]
+
+
+
